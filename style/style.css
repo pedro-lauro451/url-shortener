@@ -1,6 +1,8 @@
 body
 {
-    background-color: #032e34;
+    background-color: #151515;
+    margin: 0;
+    padding: 0;
 }
 
 input
@@ -8,31 +10,57 @@ input
     border-radius: 5px 0px 0px 5px;
     border: 1px solid transparent;
     outline: none;
-    background-color: #032e34;
     font-size: 20px;
-    color: white;
+    color: #000
+}
+
+.title
+{
+    color: #151515;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #fff;
+    padding-top: 10px;
+    background-color: #d88d12;
 }
 
 .content-container
 {
+    color: white;
     display: flex;
-    border: 1px solid black;
-    height: 300px;
+    height: 250px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: #d88d12;
+}
+
+.shortened-urls-container
+{
+    background-color: #151515;
+    padding-top: 20px;
+    display: flex;
+    height: 1px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+    color: white;
 }
 
 .container
 {
     height: 100px;
     width: 400px;
-    background-color: #004e58;
+    border: 1px solid #000;
     border-radius: 20px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #1a4d79;
+    box-shadow: 5px 7px #0b2944;
 }
 
 .item
@@ -42,16 +70,17 @@ input
 
 .btn
 {
-    background-color: #3795a1;
-    border: 1px solid #3795a1;
+    background-color: #151515;
+    border: 1px solid #151515;
     border-radius: 0px 5px 5px 0px;
     font-size: 20px;
-    color: #123438;
+    color: #d88d12;
 }
 
 .btn:hover
 {
-    background-color: #45def0;
-    border: 1px solid #45def0;
+    background-color: #d88d12;
+    border: 1px solid #d88d12;
     cursor: pointer;
+    color: #151515;
 }
