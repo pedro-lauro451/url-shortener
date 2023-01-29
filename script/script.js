@@ -16,6 +16,8 @@ btn.onclick = async function()
     });
 
     var shortened_url_element = document.createElement("div");
+    shortened_url_element.title = input_url;
+
     var button = document.createElement("button");
     button.innerText = "close";
 
@@ -39,6 +41,6 @@ btn.onclick = async function()
 
     copy.onclick = function()
     {
-        navigator.clipboard.writeText(shortened_url);
+        navigator.clipboard.writeText(shortened_url_element.innerHTML.split("<")[0]);
     }
 };
