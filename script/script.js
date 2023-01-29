@@ -13,11 +13,32 @@ btn.onclick = async function()
     .then(api_response => {
         var api_response = JSON.parse(JSON.stringify(api_response));
         shortened_url = api_response.result.short_link;
-        console.log(shortened_url);
     });
 
     var shortened_url_element = document.createElement("div");
+    var button = document.createElement("button");
+    button.innerText = "close";
+
+    var copy = document.createElement("button");
+    copy.innerText = "copy";
+
     shortened_url_element.innerHTML = shortened_url;
+
     shortened_url_element.className = "shortened-urls-container";
+    button.className = "short-url-btn";
+    copy.className = "short-url-btn";
+
     document.body.appendChild(shortened_url_element);
+    shortened_url_element.appendChild(copy);
+    shortened_url_element.appendChild(button);
+
+    button.onclick = function()
+    {
+        button.parentElement.remove();
+    }
+
+    copy.onclick = function()
+    {
+        navigator.clipboard.writeText(shortened_url);
+    }
 };
