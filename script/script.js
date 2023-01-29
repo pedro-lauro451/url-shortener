@@ -1,18 +1,23 @@
 var input_url;
 var btn = document.getElementById("btn");
-var short_url = document.getElementById("shortened-url");
-var short_urls = [];
+var shortened_url;
 
-btn.onclick = function()
+btn.onclick = async function()
 {
     input_url = document.getElementById("input-url").value;
-    fetch("https://api.shrtco.de/v2/shorten?url=" + input_url)
+
+    await fetch("https://api.shrtco.de/v2/shorten?url=" + input_url)
     .then(response => {
         return response.json();
     })
     .then(api_response => {
         var api_response = JSON.parse(JSON.stringify(api_response));
-        console.log(api_response.result.short_link);
-        short_url.innerHTML = input_url + "  -  " + api_response.result.short_link;
+        shortened_url = api_response.result.short_link;
+        console.log(shortened_url);
     });
+
+    var shortened_url_element = document.createElement("div");
+    shortened_url_element.innerHTML = shortened_url;
+    shortened_url_element.className = "shortened-urls-container";
+    document.body.appendChild(shortened_url_element);
 };

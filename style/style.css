@@ -1,6 +1,6 @@
 body
 {
-    background-color: #151515;
+    background-color: #0b2944;
     margin: 0;
     padding: 0;
 }
@@ -29,7 +29,7 @@ input
 {
     color: white;
     display: flex;
-    height: 250px;
+    height: 200px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -38,15 +38,19 @@ input
 
 .shortened-urls-container
 {
-    background-color: #151515;
-    padding-top: 20px;
     display: flex;
-    height: 1px;
+    border: 1px solid black;
+    border-radius: 20px;
+    height: 50px;
+    width: 400px;
+    margin: 0 auto;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-size: 20px;
     color: white;
+    background-color: #1a4d79;
+    margin-top: 10px;
 }
 
 .container
@@ -70,8 +74,8 @@ input
 
 .btn
 {
-    background-color: #151515;
-    border: 1px solid #151515;
+    background-color: #0b2944;
+    border: 1px solid #0b2944;
     border-radius: 0px 5px 5px 0px;
     font-size: 20px;
     color: #d88d12;
@@ -82,5 +86,5 @@ input
     background-color: #d88d12;
     border: 1px solid #d88d12;
     cursor: pointer;
-    color: #151515;
+    color: #0b2944;
 }
